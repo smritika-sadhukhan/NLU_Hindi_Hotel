@@ -9,7 +9,7 @@ with open('/content/drive/My Drive/tokenizer.pickle', 'rb') as handle:
 
 with open('/content/drive/My Drive/word_vec.pkl','rb') as f:
     word_vec = pickle.load(f)
-    print(word_vec.shape)
+  
 
 import tensorflow as tf
 CNN1=tf.keras.layers.Conv1D(300, 3, activation='relu', name='CNN1', padding='same')
