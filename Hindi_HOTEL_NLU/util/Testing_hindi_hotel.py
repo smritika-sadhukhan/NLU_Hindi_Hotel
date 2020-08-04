@@ -29,7 +29,7 @@ X = dense(X)
 bar_model=tf.keras.models.Model(inputs=embeddings, outputs=X)
 
 model1 = bar_model
-model1.load_weights('/NLU_Hindi_Hotel/Hindi_HOTEL_NLU/Model/NLU_iNTENT_HOTEL.h5')
+model1.load_weights('NLU_Hindi_Hotel/Hindi_HOTEL_NLU/Model/NLU_iNTENT_HOTEL.h5')
 model1.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
