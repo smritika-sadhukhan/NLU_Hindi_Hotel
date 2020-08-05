@@ -57,9 +57,9 @@ def predict_intent(data):
   my_prediction = model1.predict(arr)
   predicted_y =np.argmax(my_prediction, axis=1)
 
-  for i in range(0,len(predicted_y)):
+  for i in range(0,len(my_prediction)):
     print(data[i])
-    print(max(list(my_prediction[0])))
+    # print(max(list(my_prediction[0][i])))
     if predicted_y[i] == 0:
       print('--> Affirmation')
     elif predicted_y[i] == 1:
@@ -75,4 +75,6 @@ def predict_intent(data):
     elif predicted_y[i] == 6:
       print('--> Negation_Payment')
     print(' ')
+    print(max(list(my_prediction[i])))
+
 
