@@ -56,8 +56,10 @@ def predict_intent(data):
   arr = np.array(list2) 
   my_prediction = model1.predict(arr)
   predicted_y =np.argmax(my_prediction, axis=1)
+
   for i in range(0,len(predicted_y)):
     print(data[i])
+    print(max(list(predicted_y[0])))
     if predicted_y[i] == 0:
       print('--> Affirmation')
     elif predicted_y[i] == 1:
