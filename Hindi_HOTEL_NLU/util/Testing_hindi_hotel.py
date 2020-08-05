@@ -11,7 +11,7 @@ with open('/content/drive/My Drive/word_vec.pkl','rb') as f:
     word_vec = pickle.load(f)
   
 
-import tensorflow as tf
+
 CNN1=tf.keras.layers.Conv1D(300, 3, activation='relu', name='CNN1', padding='same')
 lstm1 = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(units = 100, 
                                                      return_sequences = True, 
