@@ -59,7 +59,7 @@ def predict_intent(data):
 
   for i in range(0,len(predicted_y)):
     print(data[i])
-    print(max(list(predicted_y[0])))
+    print(max(list(my_prediction[0])))
     if predicted_y[i] == 0:
       print('--> Affirmation')
     elif predicted_y[i] == 1:
